@@ -46,7 +46,7 @@ build cmake_object_order_depends_target_main: phony || .
 
 build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_ C$:/Users/Urizen/Desktop/morse-transaltor/main.cpp || cmake_object_order_depends_target_main
   DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
-  INCLUDES = -IC:/Users/Victor/scoop/apps/mingw-nuwen/current/include -IC:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include
+  INCLUDES = -IC:/Users/Victor/scoop/apps/mingw-nuwen/current/include -IC:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -IC:/Users/Urizen/Desktop/morse-translator/includes
   OBJECT_DIR = CMakeFiles\main.dir
   OBJECT_FILE_DIR = CMakeFiles\main.dir
 
@@ -59,7 +59,7 @@ build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_ C$:/Users/
 # Link the executable main.exe
 
 build main.exe: CXX_EXECUTABLE_LINKER__main_ CMakeFiles/main.dir/main.cpp.obj
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -lstdc++
   LINK_PATH = -LC:/Users/Urizen/Desktop/morse-transaltor/lib
   OBJECT_DIR = CMakeFiles\main.dir
   POST_BUILD = cd .

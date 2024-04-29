@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
-#include "translator/translator.h"
+#include "includes/translator.h"
 
 using namespace std;
 
 int main() {
+    MorseCodeTranslator translator;
     string word = "Hello world";
-    string result = encode(word);
+    string result = translator.encode(word);
     cout << result << endl;
     return 0;
 }

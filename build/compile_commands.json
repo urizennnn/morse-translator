@@ -1,7 +1,7 @@
 [
 {
   "directory": "C:/Users/Urizen/Desktop/morse-transaltor/build",
-  "command": "C:\\Users\\Urizen\\scoop\\apps\\mingw-nuwen\\current\\bin\\g++.exe -IC:/Users/Victor/scoop/apps/mingw-nuwen/current/include -IC:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Urizen\\Desktop\\morse-transaltor\\main.cpp",
+  "command": "C:\\Users\\Urizen\\scoop\\apps\\mingw-nuwen\\current\\bin\\g++.exe -IC:/Users/Victor/scoop/apps/mingw-nuwen/current/include -IC:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -IC:/Users/Urizen/Desktop/morse-translator/includes -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Urizen\\Desktop\\morse-transaltor\\main.cpp",
   "file": "C:\\Users\\Urizen\\Desktop\\morse-transaltor\\main.cpp",
   "output": "CMakeFiles\\main.dir\\main.cpp.obj"
 }

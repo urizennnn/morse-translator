@@ -1,10 +1,10 @@
-#ifndef TRANSLATE_H
-#define TRANSLATE_H
+#ifndef MORSE_CODE_TRANSLATOR_H
+#define MORSE_CODE_TRANSLATOR_H
+
+using namespace std;
 
 #include <unordered_map>
 #include <string>
-
-using namespace std;
 
 class MorseCodeTranslator {
 private:
@@ -18,5 +18,4 @@ public:
     string decode(const string& morseCode);
 };
 
-#endif
-
+#endif // MORSE_CODE_TRANSLATOR_H
