@@ -1,8 +1,14 @@
 [
 {
-  "directory": "C:/Users/Urizen/Desktop/morse-transaltor/build",
-  "command": "C:\\Users\\Urizen\\scoop\\apps\\mingw-nuwen\\current\\bin\\g++.exe -IC:/Users/Victor/scoop/apps/mingw-nuwen/current/include -IC:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -IC:/Users/Urizen/Desktop/morse-translator/includes -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\Urizen\\Desktop\\morse-transaltor\\main.cpp",
-  "file": "C:\\Users\\Urizen\\Desktop\\morse-transaltor\\main.cpp",
-  "output": "CMakeFiles\\main.dir\\main.cpp.obj"
+  "directory": "/home/urizen/morse-translator/build",
+  "command": "/usr/bin/g++ -I/home/urizen/morse-translator/C:/Users/Victor/scoop/apps/mingw-nuwen/current/include -I/home/urizen/morse-translator/C:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -I/home/urizen/morse-translator/C:/Users/Urizen/Desktop/morse-translator/includes -o CMakeFiles/main.dir/main.cpp.o -c /home/urizen/morse-translator/main.cpp",
+  "file": "/home/urizen/morse-translator/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.o"
+},
+{
+  "directory": "/home/urizen/morse-translator/build",
+  "command": "/usr/bin/g++ -I/home/urizen/morse-translator/C:/Users/Victor/scoop/apps/mingw-nuwen/current/include -I/home/urizen/morse-translator/C:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -I/home/urizen/morse-translator/C:/Users/Urizen/Desktop/morse-translator/includes -o CMakeFiles/main.dir/translator/Morse_Class.cpp.o -c /home/urizen/morse-translator/translator/Morse_Class.cpp",
+  "file": "/home/urizen/morse-translator/translator/Morse_Class.cpp",
+  "output": "CMakeFiles/main.dir/translator/Morse_Class.cpp.o"
 }
 ]

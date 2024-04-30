@@ -1,4 +1,4 @@
 # ninja log v6
-21	1059	7361054533295931	CMakeFiles/main.dir/main.cpp.obj	fffb88532d93ea4
-1071	2160	7360756635943186	main.exe	a42b34f3e346a49c
-19	771	7361069338049929	CMakeFiles/main.dir/main.cpp.obj	57eaba84669bf3d9
+1	1051	1714508691098095293	CMakeFiles/main.dir/main.cpp.o	1b4f4d1e63f6a571
+1	1622	1714508691098095293	CMakeFiles/main.dir/translator/Morse_Class.cpp.o	3d6bbe7561928b01
+1622	1791	1714508692718095337	main	de9dea8569ad303f

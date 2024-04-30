@@ -1,7 +1,8 @@
 #include "../includes/translator.h"
 #include <sstream>
-#include <algorithm>
-#include <iostream>
+
+using namespace std;
+
 
 MorseCodeTranslator::MorseCodeTranslator() {
     morseCodeMap = {
@@ -23,10 +24,10 @@ MorseCodeTranslator::MorseCodeTranslator() {
     }
 }
 
-std::string MorseCodeTranslator::encode(const std::string& text) {
-    std::string encodedText;
+string MorseCodeTranslator::encode(const string& text) {
+    string encodedText;
     for (char c : text) {
-        char uppercaseChar = std::toupper(c);
+        char uppercaseChar = toupper(c);
         if (morseCodeMap.find(uppercaseChar) != morseCodeMap.end()) {
             encodedText += morseCodeMap[uppercaseChar] + " ";
         } else {
@@ -36,11 +37,11 @@ std::string MorseCodeTranslator::encode(const std::string& text) {
     return encodedText;
 }
 
-std::string MorseCodeTranslator::decode(const std::string& morseCode) {
-    std::stringstream ss(morseCode);
-    std::string word;
-    std::string decodedText;
-    while (std::getline(ss, word, ' ')) {
+string MorseCodeTranslator::decode(const string& morseCode) {
+    stringstream ss(morseCode);
+    string word;
+    string decodedText;
+    while (getline(ss, word, ' ')) {
         if (reverseMorseCodeMap.find(word) != reverseMorseCodeMap.end()) {
             decodedText += reverseMorseCodeMap[word];
         } else {

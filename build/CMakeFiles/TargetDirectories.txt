@@ -1,3 +1,3 @@
-C:/Users/Urizen/Desktop/morse-transaltor/build/CMakeFiles/main.dir
-C:/Users/Urizen/Desktop/morse-transaltor/build/CMakeFiles/edit_cache.dir
-C:/Users/Urizen/Desktop/morse-transaltor/build/CMakeFiles/rebuild_cache.dir
+/home/urizen/morse-translator/build/CMakeFiles/main.dir
+/home/urizen/morse-translator/build/CMakeFiles/edit_cache.dir
+/home/urizen/morse-translator/build/CMakeFiles/rebuild_cache.dir

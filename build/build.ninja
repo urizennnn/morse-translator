@@ -34,7 +34,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Urizen/Desktop/morse-transaltor/build/
+cmake_ninja_workdir = /home/urizen/morse-translator/build/
 # =============================================================================
 # Object build statements for EXECUTABLE target main
 
@@ -44,11 +44,17 @@ cmake_ninja_workdir = C$:/Users/Urizen/Desktop/morse-transaltor/build/
 
 build cmake_object_order_depends_target_main: phony || .
 
-build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_ C$:/Users/Urizen/Desktop/morse-transaltor/main.cpp || cmake_object_order_depends_target_main
-  DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
-  INCLUDES = -IC:/Users/Victor/scoop/apps/mingw-nuwen/current/include -IC:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -IC:/Users/Urizen/Desktop/morse-translator/includes
-  OBJECT_DIR = CMakeFiles\main.dir
-  OBJECT_FILE_DIR = CMakeFiles\main.dir
+build CMakeFiles/main.dir/main.cpp.o: CXX_COMPILER__main_unscanned_ /home/urizen/morse-translator/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/main.cpp.o.d
+  INCLUDES = -I/home/urizen/morse-translator/C:/Users/Victor/scoop/apps/mingw-nuwen/current/include -I/home/urizen/morse-translator/C:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -I/home/urizen/morse-translator/C:/Users/Urizen/Desktop/morse-translator/includes
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir
+
+build CMakeFiles/main.dir/translator/Morse_Class.cpp.o: CXX_COMPILER__main_unscanned_ /home/urizen/morse-translator/translator/Morse_Class.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/translator/Morse_Class.cpp.o.d
+  INCLUDES = -I/home/urizen/morse-translator/C:/Users/Victor/scoop/apps/mingw-nuwen/current/include -I/home/urizen/morse-translator/C:/Users/Urizen/scoop/apps/mingw-nuwen/19.0/include -I/home/urizen/morse-translator/C:/Users/Urizen/Desktop/morse-translator/includes
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/translator
 
 
 # =============================================================================
@@ -56,24 +62,21 @@ build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_ C$:/Users/
 
 
 #############################################
-# Link the executable main.exe
+# Link the executable main
 
-build main.exe: CXX_EXECUTABLE_LINKER__main_ CMakeFiles/main.dir/main.cpp.obj
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -lstdc++
-  LINK_PATH = -LC:/Users/Urizen/Desktop/morse-transaltor/lib
-  OBJECT_DIR = CMakeFiles\main.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = main.exe
-  TARGET_IMPLIB = libmain.dll.a
-  TARGET_PDB = main.exe.dbg
+build main: CXX_EXECUTABLE_LINKER__main_ CMakeFiles/main.dir/main.cpp.o CMakeFiles/main.dir/translator/Morse_Class.cpp.o
+  OBJECT_DIR = CMakeFiles/main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = main
+  TARGET_PDB = main.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Urizen\Desktop\morse-transaltor\build && C:\Users\Urizen\scoop\apps\cmake\3.29.2\bin\cmake-gui.exe -SC:\Users\Urizen\Desktop\morse-transaltor -BC:\Users\Urizen\Desktop\morse-transaltor\build"
+  COMMAND = cd /home/urizen/morse-translator/build && /usr/bin/ccmake -S/home/urizen/morse-translator -B/home/urizen/morse-translator/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -85,7 +88,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\Urizen\Desktop\morse-transaltor\build && C:\Users\Urizen\scoop\apps\cmake\3.29.2\bin\cmake.exe --regenerate-during-build -SC:\Users\Urizen\Desktop\morse-transaltor -BC:\Users\Urizen\Desktop\morse-transaltor\build"
+  COMMAND = cd /home/urizen/morse-translator/build && /usr/bin/cmake --regenerate-during-build -S/home/urizen/morse-translator -B/home/urizen/morse-translator/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -95,17 +98,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build main: phony main.exe
-
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Urizen/Desktop/morse-transaltor/build
+# Folder: /home/urizen/morse-translator/build
 
-build all: phony main.exe
+build all: phony main
 
 # =============================================================================
 # Built-in targets
@@ -114,14 +115,14 @@ build all: phony main.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/Urizen/Desktop/morse-transaltor/CMakeLists.txt C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeRCCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/urizen/morse-translator/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/Urizen/Desktop/morse-transaltor/CMakeLists.txt C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeCInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeCXXInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeCommonLanguageInclude.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeGenericSystem.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeInitializeConfigs.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeLanguageInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeRCInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeSystemSpecificInformation.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/CMakeSystemSpecificInitialize.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/GNU-C.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/GNU-CXX.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Compiler/GNU.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-C.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU-CXX.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-GNU.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-Initialize.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows-windres.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/Windows.cmake C$:/Users/Urizen/scoop/apps/cmake/3.29.2/share/cmake-3.29/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeRCCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake: phony
+build /home/urizen/morse-translator/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.29.2/CMakeCCompiler.cmake CMakeFiles/3.29.2/CMakeCXXCompiler.cmake CMakeFiles/3.29.2/CMakeSystem.cmake: phony
 
 
 #############################################
